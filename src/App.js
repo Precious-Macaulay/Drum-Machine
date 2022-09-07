@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Board from './Components/Board'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
      <Board />
     </div>
   );

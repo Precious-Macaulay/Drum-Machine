@@ -16,6 +16,7 @@ function DrumPads() {
             keyCode={keyCode}
             keyTrigger={keyTrigger}
             url={url}
+            id={id}
           />
         );
       })}
