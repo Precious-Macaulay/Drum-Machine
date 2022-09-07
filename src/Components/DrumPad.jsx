@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 function DrumPad({ keyCode, keyTrigger, id, url }) {
-  const audio = <audio src={url} className="clip" id={keyTrigger} />;
+  const audioRef = useRef();
 
-  const handleClickTrigger = () => {
-    audio.play();
+  const [sound, setSound] = useState();
+  const [clicked, setClick] = useState(false);
+
+  useEffect(() => {
+    setSound(audioRef.current);
+  }, []);
+
+  const playSound = () => {
+    sound.currentTime = 0;
+    sound.play();
+    setClick(true);
+    setTimeout(() => {
+      setClick(false);
+    }, 100);
   };
 
   return (
-    <div className="drum-pad" id={id} onClick={handleClickTrigger}>
-      {audio}
+    <div className="drum-pad" id={id} onClick={playSound}>
+      <audio ref={audioRef} src={url} className="clip" id={keyTrigger} />
       {keyTrigger}
     </div>
   );
