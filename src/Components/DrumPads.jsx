@@ -3,12 +3,11 @@ import bankOne from "./../bank/bankOne";
 import bankTwo from "./../bank/bankTwo";
 import DrumPad from "./DrumPad";
 
-function DrumPads() {
-  const bank = bankOne;
-
+function DrumPads({ setDisplay, bank, volume, power }) {
+  const selectedBank = bank ? bankOne : bankTwo;
   return (
-    <div>
-      {bank.map((item) => {
+    <div className="pad-container">
+      {selectedBank.map((item) => {
         const { keyCode, keyTrigger, id, url } = item;
         return (
           <DrumPad
@@ -17,6 +16,9 @@ function DrumPads() {
             keyTrigger={keyTrigger}
             url={url}
             id={id}
+            setDisplay={setDisplay}
+            volume={volume}
+            power={power}
           />
         );
       })}

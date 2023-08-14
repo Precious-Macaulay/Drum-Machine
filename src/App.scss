@@ -1,4 +1,76 @@
-.App{
-    width: 100vw;
-    height: 100vh;
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: #8d8d8d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  height: 260px;
+  outline: 5px solid orange;
+  width: 660px;
+  text-align: center;
+  background-color: #b3b3b3;
+  padding: 30px;
+}
+.board-container {
+  display: flex;
+}
+.pad-container {
+  width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.drum-pad {
+  background-color: grey;
+  width: 100px;
+  height: 80px;
+  box-shadow: black 3px 3px 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bolder;
+}
+.control-panel {
+  width: 300px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.display {
+  background-color: #808080;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button {
+  border: 1px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 1px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.toggle-show {
+  width: 23px;
+  height: 19px;
+  background: blue;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.inactive {
+  background-color: black;
 }
