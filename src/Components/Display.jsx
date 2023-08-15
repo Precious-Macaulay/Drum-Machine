@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function Display() {
+function Display({ children }) {
   return (
-    <div id='display'>Display</div>
-  )
+    <div className="display" id="display">
+      {children}
+    </div>
+  );
 }
 
-export default Display
+export default Display;

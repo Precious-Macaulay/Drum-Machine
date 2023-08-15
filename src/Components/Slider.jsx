@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
 
-function Slider() {
+function Slider({ setDisplay, setVolume, power }) {
+  const handleChange = (e) => {
+    setVolume(e.target.value);
+    setDisplay(`Volume : ${Math.round(e.target.value * 100)}`);
+  };
   return (
-    <div>Slider</div>
-  )
+    <div className="slidecontainer">
+      <input
+        type="range"
+        onChange={handleChange}
+        min={0}
+        max={1}
+        step={0.01}
+        disabled={power}
+        className="slider"
+      />
+    </div>
+  );
 }
 
-export default Slider
+export default Slider;
