@@ -14,6 +14,7 @@ function Slider({ setDisplay, setVolume, power }) {
         max={1}
         step={0.01}
         disabled={power}
+        className="slider"
       />
     </div>
   );

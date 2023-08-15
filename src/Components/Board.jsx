@@ -15,8 +15,6 @@ function Board() {
 
   return (
     <div className="board" id="drum-machine">
-      <Header />
-      <div className="board-container">
         <DrumPads
           setDisplay={setDisplayText}
           volume={volume}
@@ -39,7 +37,6 @@ function Board() {
             power={power}
           />
         </div>
-      </div>
     </div>
   );
 }
